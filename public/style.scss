@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Montserrat;
+}
+::selection{
+    background-color: #6D9886;
+    color: #393E46;
+}
+.wrap{
+    width: 100%;
+    min-height: 100vh;
+    padding: 40px 40px 0 40px;
+    color: #333;
+
+    .titleAndThemeCon{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        h1{
+            font-size: 36px;
+            font-weight: 600;
+        }
+        .theme{
+            width: 65px;
+            height: 35px;
+            background-color: #393E46;
+            border-radius: 20px;
+            cursor: pointer;
+            display: flex;
+            .theme_circle{
+                width: 35px;
+                height: 35px;
+                background-color: #fff;
+                border-radius: 50%;
+                border: 3px solid #393E46;
+            }
+        }
+    }
+
+    .currentWeek{
+        display: flex;
+        align-items: center;
+        margin: 13px 0;
+        .currentWeek_weekDate{
+            font-size: 20px;
+            font-weight: 400;
+        }
+        .currentWeek_arrow{
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+        }
+        #currentWeek_arrowRight{
+            transform: rotate(180deg);        
+        }
+    }
+
+    .week{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        .weekDay{
+            width: 371px;
+            height: 250px;
+            border: #393E46 3px solid;
+            border-radius: 20px;
+            padding: 20px;
+            margin: 0px 30px 20px 0px;
+            .weekDay_title{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            .weekDay_line{
+                width: 143px;
+                height: 3px;
+                background-color: #6D9886;
+                border-radius: 20px;
+                margin-top: 5px;
+            }
+            .weekDay_lessons{
+                margin-top: 20px;
+            }
+            .weekDay_lesson{
+                display: flex;
+            }
+            .weekDay_lessonHomework{
+                margin-left: 10px;
+                color: #000;
+                font-weight: 500;
+            }
+        }
+        .time{
+            width: 371px;
+            height: 250px;
+            padding: 15px;
+            margin: 0px 30px 20px 0px;
+            .timeToSmth{
+                width: 371px;
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 30px;
+            }
+        }
+    }
+
+}

@@ -4,8 +4,223 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.js' integrity='sha512-BK9PHgiHWfibD1gZHjigMVxh6wMAFhiGa8FV3mYdGIHO7QJWlP/Uy2kTw3ykOLd9OtSJyPSqPNKIRiSmAFw6UA==' crossorigin='anonymous'></script>
 </head>
 <body>
-    <h1>Diary</h1>
+    <div class="wrap">
+        <div class="titleAndThemeCon">
+            <h1>Щоденник 9-В</h1>
+            <div class="theme" id="theme">
+                <div class="theme_circle"></div>
+            </div>
+        </div>
+        <div class="currentWeek">
+            <!-- <img class="currentWeek_arrow" id="currentWeek_arrowLeft" src="./img/arrow.png"> -->
+            <div class="currentWeek_weekDate"></div>
+            <!-- <img class="currentWeek_arrow" id="currentWeek_arrowRight" src="./img/arrow.png"> -->
+        </div>
+        <div class="week">
+            <div class="weekDay" id="Monday">
+                <div class="weekDay_title">
+                    <h3 class="weekDay_heading">Понеділок</h3>
+                    <div class="weekDay_line"></div>
+                </div>
+                <div class="weekDay_lessons">
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Алгебра:</div>
+                        <div class="weekDay_lessonHomework" id="MondayHomework1">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Фізика:</div>
+                        <div class="weekDay_lessonHomework" id="MondayHomework2">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Історія України:</div>
+                        <div class="weekDay_lessonHomework" id="MondayHomework3">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Географія:</div>
+                        <div class="weekDay_lessonHomework" id="MondayHomework4">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Трудове:</div>
+                        <div class="weekDay_lessonHomework" id="MondayHomework5">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Англійська:</div>
+                        <div class="weekDay_lessonHomework" id="MondayHomework6">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Українська мова:</div>
+                        <div class="weekDay_lessonHomework" id="MondayHomework7">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Мистецтво:</div>
+                        <div class="weekDay_lessonHomework" id="MondayHomework8">???</div>
+                    </div>
+                </div>
+            </div>
+            <div class="weekDay" id="Tuesday">
+                <div class="weekDay_title">
+                    <h3 class="weekDay_heading">Вівторок</h3>
+                    <div class="weekDay_line"></div>
+                </div>
+
+                <div class="weekDay_lessons">
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Українська мова:</div>
+                        <div class="weekDay_lessonHomework" id="TuesdayHomework1">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Геометрія:</div>
+                        <div class="weekDay_lessonHomework" id="TuesdayHomework2">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Українська літ.:</div>
+                        <div class="weekDay_lessonHomework" id="TuesdayHomework3">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Інформатика:</div>
+                        <div class="weekDay_lessonHomework" id="TuesdayHomework4">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Хімія:</div>
+                        <div class="weekDay_lessonHomework" id="TuesdayHomework5">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Всесвітня історія:</div>
+                        <div class="weekDay_lessonHomework" id="TuesdayHomework6">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Фізкультура:</div>
+                        <div class="weekDay_lessonHomework" id="TuesdayHomework7">???</div>
+                    </div>
+                </div>
+            </div>
+            <div class="weekDay" id="Wednesday">
+                <div class="weekDay_title">
+                    <h3 class="weekDay_heading">Середа</h3>
+                    <div class="weekDay_line"></div>
+                </div>
+
+                <div class="weekDay_lessons">
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Основи здоров'я</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Англійська мова:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Фізика:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Зарубіжна літ.:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Фізкультура:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Алгебра:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">ОМГ:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                </div>
+            </div>
+            <div class="weekDay" id="Thursday">
+                <div class="weekDay_title">
+                    <h3 class="weekDay_heading">Четвер</h3>
+                    <div class="weekDay_line"></div>
+                </div>
+
+                <div class="weekDay_lessons">
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Українська мова:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Біологія:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Українська літ.:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Геометрія:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Географія:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Хімія:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Інформатика:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                </div>
+            </div>
+            <div class="weekDay" id="Friday">
+                <div class="weekDay_title">
+                    <h3 class="weekDay_heading">П'ятниця</h3>
+                    <div class="weekDay_line"></div>
+                </div>
+
+                <div class="weekDay_lessons">
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Зарубіжна літ.:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Фізика:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Правознавство:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">ОХЕ:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Англійська мова:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Біологія:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Фізкультура:</div>
+                        <div class="weekDay_lessonHomework">???</div>
+                    </div>
+                </div>
+            </div>
+            <div class="time">
+                <div class="timeToSmth" id="timeToTheEndOfStudyYear"></div>
+                <div class="timeToSmth" id="timeToHolidays"></div>
+                <div class="timeToSmth" id="timeToWeekends"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <script src="./main.js"></script>
 </body>
 </html>
