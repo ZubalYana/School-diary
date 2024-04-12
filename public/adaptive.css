@@ -1,0 +1,8 @@
+@media screen and (max-device-width: 430px) {
+  .wrap .titleAndThemeCon h1 {
+    font-size: 28px;
+  }
+  .wrap .week .time .timeToSmth {
+    width: 100%;
+  }
+}/*# sourceMappingURL=adaptive.css.map */

@@ -95,39 +95,6 @@ function changeTheme(theme){
 }
 changeTheme(theme);
 
-
-//homework getting
-axios.get('http://localhost:3000/getMondayHomework')
-.then(response => {
-    console.log('Monday Homework:', response.data);
-    $('#MondayHomework1').html(response.data.Mondayhomework1);
-    $('#MondayHomework2').html(response.data.Mondayhomework2);
-    $('#MondayHomework3').html(response.data.Mondayhomework3);
-    $('#MondayHomework4').html(response.data.Mondayhomework4);
-    $('#MondayHomework5').html(response.data.Mondayhomework5);
-    $('#MondayHomework6').html(response.data.Mondayhomework6);
-    $('#MondayHomework7').html(response.data.Mondayhomework7);
-    $('#MondayHomework8').html(response.data.Mondayhomework8);
-})
-.catch(error => {
-    console.error('Error:', error);
-});
-axios.get('http://localhost:3000/getTuesdayHomework')
-.then(response => {
-    console.log('Monday Homework:', response.data);
-    $('#TuesdayHomework1').html(response.data.Tuesdayhomework1);
-    $('#TuesdayHomework2').html(response.data.Tuesdayhomework2);
-    $('#TuesdayHomework3').html(response.data.Tuesdayhomework3);
-    $('#TuesdayHomework4').html(response.data.Tuesdayhomework4);
-    $('#TuesdayHomework5').html(response.data.Tuesdayhomework5);
-    $('#TuesdayHomework6').html(response.data.Tuesdayhomework6);
-    $('#TuesdayHomework7').html(response.data.Tuesdayhomework7);
-})
-.catch(error => {
-    console.error('Error:', error);
-});
-
-
 //week displaying
 let today = new Date();
 let firstDayOfWeek = new Date(today);
@@ -144,3 +111,36 @@ function formatDate(date) {
     let month = date.getMonth() + 1;
     return (day < 10 ? '0' : '') + day + '-' + (month < 10 ? '0' : '') + month;
 }
+
+//homework getting
+// axios.get('http://localhost:3000/getMondayHomework')
+// .then(response => {
+//     console.log('Monday Homework:', response.data);
+//     $('#MondayHomework1').html(response.data.Mondayhomework1);
+//     $('#MondayHomework2').html(response.data.Mondayhomework2);
+//     $('#MondayHomework3').html(response.data.Mondayhomework3);
+//     $('#MondayHomework4').html(response.data.Mondayhomework4);
+//     $('#MondayHomework5').html(response.data.Mondayhomework5);
+//     $('#MondayHomework6').html(response.data.Mondayhomework6);
+//     $('#MondayHomework7').html(response.data.Mondayhomework7);
+//     $('#MondayHomework8').html(response.data.Mondayhomework8);
+// })
+// .catch(error => {
+//     console.error('Error:', error);
+// });
+// axios.get('http://localhost:3000/getTuesdayHomework')
+// .then(response => {
+//     console.log('Monday Homework:', response.data);
+//     $('#TuesdayHomework1').html(response.data.Tuesdayhomework1);
+//     $('#TuesdayHomework2').html(response.data.Tuesdayhomework2);
+//     $('#TuesdayHomework3').html(response.data.Tuesdayhomework3);
+//     $('#TuesdayHomework4').html(response.data.Tuesdayhomework4);
+//     $('#TuesdayHomework5').html(response.data.Tuesdayhomework5);
+//     $('#TuesdayHomework6').html(response.data.Tuesdayhomework6);
+//     $('#TuesdayHomework7').html(response.data.Tuesdayhomework7);
+// })
+// .catch(error => {
+//     console.error('Error:', error);
+// });
+
+
