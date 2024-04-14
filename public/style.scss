@@ -62,8 +62,8 @@
         display: flex;
         flex-wrap: wrap;
         .weekDay{
-            width: 371px;
-            height: 250px;
+            width: 430px;
+            height: 260px;
             border: #393E46 3px solid;
             border-radius: 20px;
             padding: 20px;
@@ -91,6 +91,9 @@
                 margin-left: 10px;
                 color: #000;
                 font-weight: 500;
+            }
+            .weekDay_lessonName{
+                min-width: 10px;
             }
         }
         .time{
