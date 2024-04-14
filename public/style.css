@@ -69,7 +69,7 @@
 }
 .wrap .week .weekDay {
   width: 430px;
-  height: 260px;
+  min-height: 260px;
   border: #393E46 3px solid;
   border-radius: 20px;
   padding: 20px;
