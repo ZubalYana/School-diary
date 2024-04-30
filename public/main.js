@@ -37,7 +37,7 @@ function countdownNextHolidays() {
 setInterval(countdownNextHolidays, 1000);
 function countdownWeekends() {
     var currentDate = new Date(); 
-    var targetDate = new Date("April 20, 2024 00:00:00"); 
+    var targetDate = new Date("May 4, 2024 00:00:00"); 
 
     var difference = targetDate.getTime() - currentDate.getTime();
 
