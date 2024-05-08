@@ -19,7 +19,7 @@ function countdownEndOfYear() {
 setInterval(countdownEndOfYear, 1000);
 function countdownNextHolidays() {
     var currentDate = new Date(); 
-    var targetDate = new Date("May 5, 2024 00:00:00"); 
+    var targetDate = new Date("June 8, 2024 00:00:00"); 
 
     var difference = targetDate.getTime() - currentDate.getTime();
 
@@ -37,7 +37,7 @@ function countdownNextHolidays() {
 setInterval(countdownNextHolidays, 1000);
 function countdownWeekends() {
     var currentDate = new Date(); 
-    var targetDate = new Date("May 4, 2024 00:00:00"); 
+    var targetDate = new Date("May 11, 2024 00:00:00"); 
 
     var difference = targetDate.getTime() - currentDate.getTime();
 
