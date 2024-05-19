@@ -84,11 +84,20 @@ function changeTheme(theme){
 changeTheme(theme);
 
 //bot message sending
-// axios.post('http://localhost:3000/send', data)
-// .then((res)=>{
-//     console.log(res.data)
-//     if(res.status == 200){
-//         userName.value = '';
-//         userPhone.value = '';
-//     }
-// })
+
+$('#send').click(() => {
+    let data = {
+        homework: $('.bot_message').val()
+    };
+    axios.post('http://localhost:3000/send', data)
+        .then((res) => {
+            console.log(res.data);
+            if (res.status === 200) {
+                $('.bot_message').val(' ');
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+});
+
