@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat;
+  color: #333;
+}
+
+::-moz-selection {
+  background-color: #6D9886;
+  color: #393E46;
+}
+
+::selection {
+  background-color: #6D9886;
+  color: #393E46;
+}
+
+.wrap {
+  width: 100%;
+  min-height: 100vh;
+  padding: 40px 40px 0 40px;
+  color: #333;
+}
+.wrap .titleAndThemeCon {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.wrap .titleAndThemeCon h1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+.wrap .titleAndThemeCon .theme {
+  width: 65px;
+  height: 35px;
+  background-color: #393E46;
+  border-radius: 20px;
+  cursor: pointer;
+  display: flex;
+}
+.wrap .titleAndThemeCon .theme .theme_circle {
+  width: 35px;
+  height: 35px;
+  background-color: #fff;
+  border-radius: 50%;
+  border: 3px solid #393E46;
+}
+.wrap .week {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.wrap .week .weekDay {
+  width: 371px;
+  height: 250px;
+  border: #393E46 3px solid;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 0px 30px 20px 0px;
+}
+.wrap .week .weekDay .weekDay_title {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.wrap .week .weekDay .weekDay_line {
+  width: 143px;
+  height: 3px;
+  background-color: #6D9886;
+  border-radius: 20px;
+  margin-top: 5px;
+}
+.wrap .week .weekDay .weekDay_lessons {
+  margin-top: 20px;
+}
+.wrap .week .weekDay .weekDay_lesson {
+  display: flex;
+}
+.wrap .week .weekDay .weekDay_lessonHomework {
+  margin-left: 10px;
+  color: #000;
+  font-weight: 500;
+  width: 150px;
+  border: none;
+  outline: none;
+}
+.wrap .week .addBtn {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  border: #333 3px solid;
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+.wrap .week .addBtn:hover {
+  width: 200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 24px;
+  border: #6D9886 3px solid;
+  cursor: pointer;
+  background-color: #6D9886;
+}/*# sourceMappingURL=styles.css.map */

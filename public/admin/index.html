@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic" rel="stylesheet" />
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/1.6.7/axios.js' integrity='sha512-BK9PHgiHWfibD1gZHjigMVxh6wMAFhiGa8FV3mYdGIHO7QJWlP/Uy2kTw3ykOLd9OtSJyPSqPNKIRiSmAFw6UA==' crossorigin='anonymous'></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="titleAndThemeCon">
+            <h1>Адмін панель</h1>
+            <div class="theme" id="theme">
+                <div class="theme_circle"></div>
+            </div>
+        </div>
+
+        <div class="week">
+            <div class="weekDay" id="Monday">
+                <div class="weekDay_title">
+                    <h3 class="weekDay_heading">Понеділок</h3>
+                    <div class="weekDay_line"></div>
+                </div>
+                <div class="weekDay_lessons">
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Алгебра:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="homework1">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Фізика:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="homework2">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Історія України:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="homework3">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Географія:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="homework4">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Трудове:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="homework5">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Англійська:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="homework6">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Українська мова:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="homework7">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Мистецтво:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="homework8">
+                    </div>
+                </div>
+            </div>
+            <div class="weekDay" id="Tuesday">
+                <div class="weekDay_title">
+                    <h3 class="weekDay_heading">Вівторок</h3>
+                    <div class="weekDay_line"></div>
+                </div>
+
+                <div class="weekDay_lessons">
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Українська мова:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="Tuesdayhomework1">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Геометрія:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="Tuesdayhomework2">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Українська літ.:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="Tuesdayhomework3">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Інформатика:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="Tuesdayhomework4">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Хімія:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="Tuesdayhomework5">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Всесвітня історія:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="Tuesdayhomework6">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Фізкультура:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???" id="Tuesdayhomework7">
+                    </div>
+                </div>
+            </div>
+            <div class="weekDay" id="Wednesday">
+                <div class="weekDay_title">
+                    <h3 class="weekDay_heading">Середа</h3>
+                    <div class="weekDay_line"></div>
+                </div>
+
+                <div class="weekDay_lessons">
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Основи здоров'я</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Англійська мова:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Фізика:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Зарубіжна літ.:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Фізкультура:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Алгебра:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">ОМГ:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                </div>
+            </div>
+            <div class="weekDay" id="Thursday">
+                <div class="weekDay_title">
+                    <h3 class="weekDay_heading">Четвер</h3>
+                    <div class="weekDay_line"></div>
+                </div>
+
+                <div class="weekDay_lessons">
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Українська мова:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Біологія:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Українська літ.:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Геометрія:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Географія:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Хімія:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Інформатика:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                </div>
+            </div>
+            <div class="weekDay" id="Friday">
+                <div class="weekDay_title">
+                    <h3 class="weekDay_heading">П'ятниця</h3>
+                    <div class="weekDay_line"></div>
+                </div>
+
+                <div class="weekDay_lessons">
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Зарубіжна літ.:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Фізика:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Правознавство:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">ОХЕ:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Англійська мова:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Біологія:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                    <div class="weekDay_lesson">
+                        <div class="weekDay_lessonName">Фізкультура:</div>
+                        <input class="weekDay_lessonHomework" placeholder="???">
+                    </div>
+                </div>
+            </div>
+            <div class="addBtn">Add</div>
+        </div>
+    </div>
+
+
+
+    <script src="./main.js"></script>
+</body>
+</html>
