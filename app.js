@@ -20,12 +20,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
 bot.onText(/\/start/, (msg) => {
-    bot.sendMessage(msg.chat.id, "Response");
+    const chatId = msg.chat.id;
+
+    if (!users.includes(chatId)) {
+        users.push(chatId);
+        fs.writeFileSync(usersFilePath, JSON.stringify(users));
+    }
+
+    bot.sendMessage(chatId, "Welcome! You've activated the bot.");
 });
 
-app.post('/send', (req, res)=>{
-    console.log(req.body)
-})
+app.post('/send', (req, res) => {
+    console.log(req.body.homework)
+    const message = req.body.homework;
+
+    users.forEach(userId => {
+        bot.sendMessage(userId, message);
+    });
+
+    res.sendStatus(200);
+});
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
