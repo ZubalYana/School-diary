@@ -19,17 +19,6 @@ if (fs.existsSync(usersFilePath)) {
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 
-bot.on('message', (msg) => {
-    const chatId = msg.chat.id;
-    console.log(`Received message from chatId: ${chatId}`);
-
-    if (!users.includes(chatId)) {
-        users.push(chatId);
-        fs.writeFileSync(usersFilePath, JSON.stringify(users, null, 2));
-        console.log(`Added new user: ${chatId}`);
-    }
-});
-
 bot.onText(/\/start/, (msg) => {
     bot.sendMessage(msg.chat.id, "Response");
 });
