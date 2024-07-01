@@ -6,7 +6,7 @@ const fs = require('fs');
 const TelegramBot = require('node-telegram-bot-api');
 const PORT = 3000;
 const TOKEN = '7434998252:AAGvjoW9XAUQUbgNwN0YQs7cbsSMrooX8BA'; 
-const bot = new TelegramBot(TOKEN, {polling: true});
+const bot = new TelegramBot(TOKEN, {});
 
 const usersFilePath = path.join(__dirname, 'users.json');
 let users = [];
