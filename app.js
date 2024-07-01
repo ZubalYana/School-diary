@@ -40,7 +40,7 @@ app.get('/admin', (req, res) => {
 });
 
 // Endpoint to send message to all users
-app.post('/send-message', (req, res) => {
+app.post('/send', (req, res) => {
     const message = req.body.message;
     const chatIds = getChatIds();
 

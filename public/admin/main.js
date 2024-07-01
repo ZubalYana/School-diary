@@ -87,7 +87,7 @@ changeTheme(theme);
 
 $('#send').click(() => {
     let data = {
-        homework: $('.bot_message').val()
+        message: $('.bot_message').val()
     };
     axios.post('http://localhost:3000/send', data)
         .then((res) => {
