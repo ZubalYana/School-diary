@@ -39,7 +39,15 @@ app.post('/send', (req, res) => {
 
     res.sendStatus(200);
 });
+bot.on('message', (msg) => {
+    const userId = 1132590035; 
+    const chatId = msg.chat.id;
+    const message = msg.text || '';
 
+    if (chatId !== userId) {
+        bot.sendMessage(userId, `New message from ${chatId}: ${message}`);
+    }
+});
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
