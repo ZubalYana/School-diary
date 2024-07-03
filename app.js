@@ -20,7 +20,6 @@ app.use(bodyParser.json());
 
 bot.onText(/\/start/, (msg) => {
     const chatId = msg.chat.id;
-
     if (!users.includes(chatId)) {
         users.push(chatId);
         fs.writeFileSync(usersFilePath, JSON.stringify(users));
