@@ -5,8 +5,8 @@ const bodyParser = require('body-parser');
 const fs = require('fs');
 const TelegramBot = require('node-telegram-bot-api');
 const PORT = 3000;
-const TOKEN = '7434998252:AAGvjoW9XAUQUbgNwN0YQs7cbsSMrooX8BA'; 
-const bot = new TelegramBot(TOKEN, {});
+const TOKEN = '7434998252:AAGvjoW9XAUQUbgNwN0YQs7cbsSMrooX8BA';
+const bot = new TelegramBot(TOKEN, { polling: true });
 
 const usersFilePath = path.join(__dirname, 'users.json');
 let users = [];
@@ -29,7 +29,7 @@ bot.onText(/\/start/, (msg) => {
 });
 
 app.post('/send', (req, res) => {
-    console.log(req.body.message)
+    console.log(req.body.message);
     const message = req.body.message;
 
     users.forEach(userId => {
@@ -38,8 +38,9 @@ app.post('/send', (req, res) => {
 
     res.sendStatus(200);
 });
+
 bot.on('message', (msg) => {
-    const userId = 1132590035; 
+    const userId = 1132590035;
     const chatId = msg.chat.id;
     const message = msg.text || '';
 
@@ -47,6 +48,7 @@ bot.on('message', (msg) => {
         bot.sendMessage(userId, `New message from ${chatId}: ${message}`);
     }
 });
+
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
