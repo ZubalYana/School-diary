@@ -4,8 +4,10 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const fs = require('fs');
 const TelegramBot = require('node-telegram-bot-api');
-const PORT = 3000;
 const dotenv = require('dotenv');
+dotenv.config();
+
+const PORT = 3000;
 const TOKEN = '7434998252:AAGvjoW9XAUQUbgNwN0YQs7cbsSMrooX8BA';
 const bot = new TelegramBot(TOKEN, { polling: true });
 
